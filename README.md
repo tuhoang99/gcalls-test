@@ -11,7 +11,7 @@
 
 ## 🚀 Demo
 
-- Try the website:[Gcalls Test](https://gcalls_test.surge.sh/)
+* `Try the website:` [Gcalls Test](https://gcalls_test.surge.sh/)
 
 ## 🛠️ Installation Steps
 
