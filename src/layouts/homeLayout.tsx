@@ -130,8 +130,9 @@ const HomeLayout: React.FC = () => {
             noValidate
             autoComplete='off'
             onSubmit={handleSubmit(onSubmit)}
+            sx={{ width: '450px', height: '550px', maxWidth: '450px' }}
           >
-            <Grid container spacing={1} sx={{ width: '450px', height: '550px' }}>
+            <Grid container spacing={1}>
               <Grid item xs={1} md={12}>
                 <TextField
                   margin="dense"

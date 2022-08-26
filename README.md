@@ -9,8 +9,6 @@
     <a href="https://gcalls_test.surge.sh/" target="blank">View Demo</a>
 </p>
 
----
-
 ## 🚀 Demo
 
 - Try the website:[Gcalls Test](https://gcalls_test.surge.sh/)
