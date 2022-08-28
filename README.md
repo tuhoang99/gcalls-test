@@ -6,12 +6,16 @@
 </h1>
 
 <p align="center">
-    <a href="https://gcalls_test.surge.sh/" target="blank">View Demo</a>
+    <img alt="logo" src="./src/assets/images/testgcalls.gif"  />
+</p>
+
+<p align="center">
+    <a href="https://drive.google.com/file/d/1p6C4DWzuYLcEiaRswlI_foUIlER_KEkT/view?usp=sharing" target="blank">Download video demo</a>
 </p>
 
 ## 🚀 Demo
 
-* `Try the website:` [Gcalls Test](https://gcalls_test.surge.sh/)
+- `Try the website:` [Gcalls Test](https://gcalls_test.surge.sh/)
 
 ## 🛠️ Installation Steps
 
