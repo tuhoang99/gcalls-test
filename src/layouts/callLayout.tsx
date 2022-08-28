@@ -14,6 +14,7 @@ const CallLayout: React.FC = () => {
   const [status, setStatus] = useState<string>('Chưa kết nối! Vui lòng kiểm tra lại!');
   const [color, setColor] = useState<boolean>(false);
   const [disabled, setDisabled] = useState<boolean>(true);
+  const [input, setInput] = useState<boolean>(true);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const [showCall, setShowCall] = useState<any>({ display: 'none' })
 
@@ -31,8 +32,11 @@ const CallLayout: React.FC = () => {
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleLogout = () => {
     navigate('/');
   };
 
@@ -43,7 +47,7 @@ const CallLayout: React.FC = () => {
       setDisabled(true);
     }
     if (status !== 'Chưa kết nối! Vui lòng kiểm tra lại!') {
-      setColor(true)
+      setColor(true);
     }
   }, [phone, status]);
 
@@ -61,6 +65,7 @@ const CallLayout: React.FC = () => {
 
     ua.on('connected', () => {
       setStatus('Đã kết nối!');
+      setInput(false);
       console.log('connected');
     });
     ua.on('disconnected', () => {
@@ -143,7 +148,7 @@ const CallLayout: React.FC = () => {
               TransitionComponent={Fade}
             >
               <MenuItem
-                onClick={handleClose}>
+                onClick={handleLogout}>
                 <ListItemIcon>
                   <IconLogout stroke={1.5} size="1.6rem" />
                 </ListItemIcon>
@@ -158,6 +163,7 @@ const CallLayout: React.FC = () => {
                   margin="dense"
                   id="phoneNumber"
                   label="Enter phone number"
+                  disabled={input}
                   onChange={handleChange}
                   value={phone}
                   variant="standard"
